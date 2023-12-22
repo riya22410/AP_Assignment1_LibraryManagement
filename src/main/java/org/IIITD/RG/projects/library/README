@@ -1,0 +1,103 @@
+*************************************** Library Management System *****************************************************
+Made by: RIYA GUPTA
+Roll no. : 2022410
+Email ID: riya22410@iiitd.ac.in
+
+---> Overview:
+The Library Management System is a Java-based application designed to manage IIITD-library's day-to-day operations using
+and implementing OOPS principles.
+It allows librarians to add and remove books, register and remove members, and view detailed information about books
+and library members. Additionally, it enables students to browse available books, issue books, return books, and check
+their fines.
+
+---> Features:
+a) For Librarians:
+- Add a Book: Librarians can add new books to the library's collection by providing the book's title, author, and the
+number of copies to be added.
+
+- Delete a Book: Librarians can remove books from the library's collection based on the book's unique ID. Books cannot
+be deleted if they are currently checked out.
+
+- Register a Member: Librarians can register new library members by providing their name, age, and phone number. Each
+member is assigned a unique member ID by the system automatically.
+
+- Remove a Member: Librarians can remove existing members from the library. Members can only be removed if they have
+no books checked out and no fines. Although unique member IDs are generated for every member, the removal is done through
+their phone numbers only which too are ensured to be unique.
+
+- View All Members and Fines: Librarians can view a list of all registered members, along with the IDs of the books
+they have checked out and any fines they owe.
+
+- View All Books: Librarians can view a list of all books in the library, including their titles, authors, and
+availability status.
+
+b) For Students:
+- Browse Available Books: Students can view a list of books available in the library, including titles and authors.
+
+- Issue a Book: Students can check out books by entering the book's unique ID. They can check out up to two books at a
+time.
+
+- Return a Book: Students can return books they have checked out. Fines may apply for late returns, post 10 days.
+(1 sec = 1 day).
+
+- View My Books: Students can see the IDs of the books they have checked out.
+
+---> Usage
+1. Run the application, and you will be presented with options to enter as a librarian or a member (student).
+
+2. If entering as a librarian, provide the correct password when prompted ("User_librarian"). You can then perform
+librarian-specific actions.
+
+3. If entering as a student, you will be asked to enter your name and phone number. If valid credentials are provided,
+you are logged into the system and can perform student-specific actions.
+
+4. Follow the on-screen prompts to use the application, such as adding/removing books, issuing/returning books, and
+viewing information.
+
+---> Project Structure
+The project is organized into several packages:
+
+- `org.IIITD.RG.projects.library`: The parent package for this assignment. It contains the main file and the README file.
+
+- `org.IIITD.RG.projects.library.Datalibrary`: Contains classes related to data storage and management, including book
+data and student records.
+
+- `org.IIITD.RG.projects.library.Librarian`: Contains the `Librarian` class, which provides functionality for librarians.
+
+- `org.IIITD.RG.projects.library.Menu`: Contains the `Menu` class, which handles the main menu and user interactions.
+
+- `org.IIITD.RG.projects.library.Student`: Contains the `Student` class, which provides functionality for students.
+
+---> Implementation of OOPS in the program:
+1. Classes and Objects:
+   - Class Definitions: The code defines several classes, such as `Main`, `Menu`, `Datalibrary`, `Librarian`, and
+`Student`. Each class encapsulates specific functionality and data.
+
+   - Object Creation: Objects of these classes are created and used throughout the code. For example, instances of
+`Librarian` and `Student` are created to interact with the system.
+
+2. Encapsulation:
+   - Private and Public Access Modifiers: The code uses access modifiers like `private` and `public` to control the
+   visibility and access to class members (variables and methods). For example, member variables in the `Student` class
+   are private and accessed through public getter and setter methods.
+
+   - Data Hiding: Class members are encapsulated within their respective classes, and direct access to internal data
+   is restricted. This promotes data integrity and reduces the risk of unintended modifications. Eg. Student class
+
+3. Abstraction:
+   - Abstract Classes and Methods: In the 'Menu' class, implementation details are hidden from the user, only the
+   functionality is visible.
+
+4. Class relationships:
+a) Composition:
+   - Object Composition: The code demonstrates composition by creating instances of one class within another. Eg. the
+   `Menu` class uses instances of `Librarian` and `Student` to provide functionality based on user input.
+
+b) Association:
+   - Association Between Classes: There is an association between the `Datalibrary` class and the `Librarian` and
+   `Student` classes. The `Librarian` and `Student` classes interact with the library's data stored in the
+   `Datalibrary` class.
+
+Overall, the code effectively demonstrates the principles of Object-Oriented Programming (OOPS). It uses classes,
+objects, encapsulation, abstraction, and class relationships to create a modular and organized system for managing
+a library, thus promoting reusability, maintainability, and readability in the program.
